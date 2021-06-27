@@ -15,7 +15,7 @@ function FetchButton(props) {
     var urlencoded = new URLSearchParams();
     urlencoded.append(
       "Authentication",
-      "Basic 5e0ae33bd07143cb93a0e0827a233653:14a13a39ef3c4bab87aec55206cc3132"
+      "Basic "
     );
     urlencoded.append("grant_type", "client_credentials");
 
