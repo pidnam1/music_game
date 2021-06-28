@@ -3,7 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 function Settings() {
   // useState hook
 
-  const [options, setOptions] = useState(["Kanye West", "Kendrick Lamar", "Frank Ocean"]);
+  const [options, setOptions] = useState([
+    "Kanye West",
+    "Kendrick Lamar",
+    "Frank Ocean",
+    "MF DOOM",
+    "Radiohead",
+    "Pink Floyd",
+  ]);
   const artistChosen = useSelector((state) => state.options.artist);
   const dispatch = useDispatch();
   // useEffect hook
