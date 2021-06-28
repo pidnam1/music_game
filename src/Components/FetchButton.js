@@ -6,12 +6,33 @@ function FetchButton(props) {
   //access values that will be used to create API query
   let artistChosen = useSelector((state) => state.options.artist);
 
+<<<<<<< HEAD
   const dispatch = useDispatch();
   const setQuestions = (value) => {
     dispatch({
       type: "SET_QUESTIONS",
       questions: value,
     });
+=======
+    var urlencoded = new URLSearchParams();
+    urlencoded.append(
+      "Authentication",
+      "Basic "
+    );
+    urlencoded.append("grant_type", "client_credentials");
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: urlencoded,
+      redirect: "follow",
+    };
+
+    let res = await fetch("https://accounts.spotify.com/api/token", requestOptions);
+    res = await res.json();
+    console.log(res.access_token);
+    search(res.access_token);
+>>>>>>> 47fb62436b5aa5cfa839922c32ab91400aa82a99
   };
   const setFetched = () => {
     dispatch({
